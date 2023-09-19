@@ -1,7 +1,9 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "首页s";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting.jsx";
+const pageTitle = "首页";
 ---
+
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+  <Greeting client:load messages={["你好", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
